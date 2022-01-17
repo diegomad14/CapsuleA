@@ -66,7 +66,7 @@ def ejecutarPrograma():
 
 
 cb = ttk.Combobox(root,state='readonly')
-cb['values'] = ('Lunes','Martes','Miercoles','Jueves','Viernes','Sabado')
+cb['values'] = ('Lunes-Jueves','Martes-Viernes','Miercoles-Sábado')
 cb.current(0)
 
 box = Entry(root)
