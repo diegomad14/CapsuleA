@@ -6,7 +6,7 @@ from tkinter import messagebox
 from conf import SAMPLE_INPUTS, SAMPLE_OUTPUTS
 import tkinter as tk
 import os
-from creadorDeImg import imagen_1, imagen_2, imagen_3, imagen_4, imagen_5
+from creadorDeImg import imagen_1
 
 
 root = tk.Tk()
@@ -47,22 +47,14 @@ def saveIn():
     refresh()
 
 def ejecutarPrograma():
-    global dirSave, dirFile, png_1, png_2, png_3, png_4, png_5
+    global dirSave, dirFile, png_1
     titulo = box.get()
     dia = cb.get()
     num = boxNum.get()
     png_1 = imagen_1(dia,titulo,num)
-    png_2 = imagen_2(dia,titulo,num)
-    png_3 = imagen_3(dia,titulo,num)
-    png_4 = imagen_4(dia,titulo,num)
-    png_5 = imagen_5(dia,titulo,num)
     x = messagebox.askyesno(message="¿Desea continuar?", title="")
     if x:
         png_1.save(os.path.join(dirSave,'Capsula_'+num+'_1.png'))
-        png_2.save(os.path.join(dirSave,'Capsula_'+num+'_2.png'))
-        png_3.save(os.path.join(dirSave,'Capsula_'+num+'_3.png'))
-        png_4.save(os.path.join(dirSave,'Capsula_'+num+'_4.png'))
-        png_5.save(os.path.join(dirSave,'Capsula_'+num+'_5.png'))
 
 
 cb = ttk.Combobox(root,state='readonly')
