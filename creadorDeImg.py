@@ -35,7 +35,13 @@ def imagen_1(dia, titulo, numeroC):
     diaC = dia
     separado = titulo.split()
     white = (255,255,255,255)
-    color = white
+    color = ""
+
+    if dia=="Lunes-Jueves":
+        color=(76,76,76,255)
+    else:
+        color=white
+
 
     for i in separado:
         numeroPalabras += 1
